@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f3f3f3;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.resume {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    background: white;
+}
+
+
+
+.header {
+    background: #343741;
+    color: white;
+    height: 220px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 380px;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 340px;
+    height: 60px;
+    background: #343741;
+    clip-path: polygon(0 0, 100% 0, 40% 100%);
+}
+
+.profile-image {
+    position: absolute;
+    left: 65px;
+    top: 40px;
+}
+
+.profile-image img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-content h1 {
+    font-size: 64px;
+    font-weight: 300;
+}
+
+.header-content h3 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    width: 34%;
+    background: #e7e1dd;
+    padding: 100px 40px 50px;
+}
+
+.main-content {
+    width: 66%;
+    padding: 100px 40px 60px;
+}
+
+
+
+.sidebar section {
+    margin-bottom: 55px;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+}
+
+.contact-item i {
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.education {
+    display: flex;
+    gap: 20px;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 7px;
+}
+
+.timeline-dot::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 85px;
+    background: #333;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+}
+
+.education h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.education p {
+    margin-bottom: 5px;
+}
+
+.skills {
+    list-style: none;
+}
+
+.skills li {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+
+
+.section-title {
+    font-size: 22px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.main-content section {
+    margin-bottom: 55px;
+}
+
+.main-content p {
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.job {
+    margin-bottom: 35px;
+}
+
+.job h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.job span {
+    color: gray;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.job ul {
+    padding-left: 25px;
+}
+
+.job li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+    }
+
+    .header {
+        padding-left: 240px;
+    }
+
+    .header-content h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .profile-image {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .header::after {
+        display: none;
+    }
+
+    .header-content h1 {
+        font-size: 36px;
+    }
+
+    .header-content h3 {
+        font-size: 20px;
+    }
+
+    .sidebar,
+    .main-content {
+        padding: 40px 25px;
+    }
+}
