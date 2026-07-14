@@ -71,13 +71,13 @@ body {
 }
 
 .sidebar {
-    width: 34%;
+    width: 38%;
     background: #e7e1dd;
     padding: 100px 40px 50px;
 }
 
 .main-content {
-    width: 66%;
+    width: 62%;
     padding: 100px 40px 60px;
 }
 
@@ -245,3 +245,27 @@ body {
         padding: 40px 25px;
     }
 }
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    font-size: 18px;
+    color: #343741;
+    width: 20px;
+    
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #0077b5;
+}
+
